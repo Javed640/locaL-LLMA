@@ -25,7 +25,7 @@ jobs:
 
       - name: Build EXE
         run: |
-          pyinstaller --onefile --noconsole --name LocalLLM_Notepad main.py
+         pyinstaller --onefile --noconsole --name LocalLLM_Notepad Notepad/chat_gui.py
 
       - name: Upload EXE
         uses: actions/upload-artifact@v4
