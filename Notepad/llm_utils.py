@@ -66,14 +66,14 @@ def _lazy_load_model(model_path: str):
     from llama_cpp import Llama  # local import intentional
 
     _llm = Llama(
-        model_path=model_path,
-        flash_attn=False,
-        n_gpu_layers=0,
-        n_batch=8,
-        n_ctx=102_400,
-        n_threads=8,
-        n_threads_batch=8,
-    )
+    model_path=model_path,
+    flash_attn=False,
+    n_gpu_layers=0,
+    n_batch=8,
+    n_ctx=2048,
+    n_threads=8,
+    n_threads_batch=8,
+)
     _llm_model_path = model_path
     return _llm
 
